@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+    position: relative;
+}
+
+.logo::after{
+    content: '.';
+    width: 20px;
+    height: 20px;
+    color: purple;
+}
+
+.link__items{
+    position: relative;
+}
+
+.link__items::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: purple;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ease;
+}
+
+.link__items:hover::before{
+    width: 100%;
+    color: black;
+  }
